@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/EX_ObjectList/EX_ObjectList.iml" filepath="$PROJECT_DIR$/EX_ObjectList/EX_ObjectList.iml" />
       <module fileurl="file://$PROJECT_DIR$/EX_ObjectTypeCounter/EX_ObjectTypeCounter.iml" filepath="$PROJECT_DIR$/EX_ObjectTypeCounter/EX_ObjectTypeCounter.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/POO_EX.iml" filepath="$PROJECT_DIR$/.idea/POO_EX.iml" />
     </modules>

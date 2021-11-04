@@ -1,3 +1,12 @@
+/**
+ * Authors:     Alen Bijelic, Nelson Jeanrenaud
+ * Date:        28.10.2021
+ *
+ * Description: ObjectTypesArray is able to count the number of different classes
+ *              in a given Object array. The results are available via the toString method.
+ *
+ * Comments:    none.
+ */
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -28,6 +37,8 @@ public class ObjectTypesArray {
             this.objects[0] = new ObjectType(objects[0].getClass());
             int typeObjectIndex = 0;
             for (int i = 1; i < objects.length; i++) {
+                // if the current object is a new class we move in the class array
+                // otherwise, we increment
                 if(currentClass != objects[i].getClass()) {
                     this.objects[++typeObjectIndex] = new ObjectType(objects[i].getClass());
                     currentClass = objects[i].getClass();
