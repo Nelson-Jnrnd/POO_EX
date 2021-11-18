@@ -1,4 +1,6 @@
-public class Examinator {
+import java.util.Iterator;
+
+public class Examinator implements Iterator<Element> {
     private Element current;
 
     public Examinator(Element current) {
@@ -6,16 +8,11 @@ public class Examinator {
     }
 
     public boolean hasNext(){
-        if(current == null)
-            return false;
-        return current.next != null;
+        return current != null;
     }
-    public Object next(){
-        if(current != null)
-            current = current.next;
-        return current;
-    }
-    public Object current(){
-        return current;
+    public Element next(){
+        Element returnval = current;
+        current = current.next;
+        return returnval;
     }
 }

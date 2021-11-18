@@ -23,9 +23,14 @@ public class ObjectList {
 
     public void append(Object o) {
         Examinator currentElement = new Examinator(head);
-        while (currentElement.next() != null) {
+        Element curr;
+        do {
+            curr = currentElement.next();
+        } while (currentElement.hasNext());
+        // Add
+        if(curr != null) {
+            curr.next = new Element(o);
         }
-        ((Element) (currentElement.current())).next = new Element(o);
     }
 
     public void remove(Object o) {
@@ -37,7 +42,7 @@ public class ObjectList {
         Examinator currentElement = new Examinator(head);
         while (currentElement.next() != null) {
             if (counter++ == index) {
-                return currentElement.current();
+               // return currentElement.current();
             }
         }
         throw new RuntimeException("Index is out of bounds");
@@ -45,10 +50,11 @@ public class ObjectList {
 
     public String toString() {
         StringBuilder s = new StringBuilder();
-
-        Examinator currentElement = new Examinator(head);
-        while (currentElement.next() != null) {
-            s.append((Element)currentElement.current());
+        if(head == null){
+            return "";
+        }
+        for(Examinator currentElement = new Examinator(head);currentElement.hasNext();) {
+            s.append(currentElement.next());
             if (currentElement.hasNext()) {
                 s.append("-");
             }
@@ -77,9 +83,14 @@ class Main {
         ObjectList lst = new ObjectList();
 
         for (int i = 0; i < 10; i++) {
-            lst.insert(i);
+            if(i % 2 == 0){
+                lst.insert(i);
+            }else{
+                lst.append(i);
+            }
             System.out.println("Iteration " + i + ": " + lst);
         }
+
     }
 }
 
