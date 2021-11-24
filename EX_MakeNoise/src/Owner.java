@@ -1,8 +1,6 @@
-public class Owner {
-    private String name;
-
+public class Owner extends Animal {
     public Owner(String name) {
-        this.name = name;
+        super(name);
     }
 
     @Override

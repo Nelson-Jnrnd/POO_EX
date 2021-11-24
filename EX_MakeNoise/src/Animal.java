@@ -3,7 +3,7 @@ public abstract class Animal {
         return name;
     }
 
-    private final String name;
+    protected final String name;
 
     public Animal(String name) {
         this.name = name;

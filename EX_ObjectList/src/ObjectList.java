@@ -1,6 +1,7 @@
 public class ObjectList {
 
     private Element head;
+    private Examinator iterator;
 
     public boolean isEmpty() {
         return size() == 0;
@@ -22,19 +23,30 @@ public class ObjectList {
     }
 
     public void append(Object o) {
-        Examinator currentElement = new Examinator(head);
-        Element curr;
-        do {
-            curr = currentElement.next();
-        } while (currentElement.hasNext());
-        // Add
-        if(curr != null) {
-            curr.next = new Element(o);
+        if(iterator == null){
+            iterator = new Examinator(head == null ? new Element(o) : head);
+        }
+        Element last = iterator.next();
+        if(last != null){
+            boolean wasNull = last.next == null;
+            last.next = new Element(o);
+            if(wasNull)
+                iterator = new Examinator(last.next);
         }
     }
 
     public void remove(Object o) {
-
+        Examinator currentElement = new Examinator(head);
+        Examinator prevElement = new Examinator(head);
+        Element curr = currentElement.next();
+        while (currentElement.hasNext()) {
+            curr = currentElement.next();
+            if(curr.data == o){
+                prevElement.next().next = curr.next;
+            }else{
+                prevElement.next();
+            }
+        }
     }
 
     public Object get(int index) {
@@ -87,6 +99,11 @@ class Main {
                 lst.insert(i);
             }else{
                 lst.append(i);
+            }
+            if(i == 5){
+                lst.remove(0);
+                lst.remove(1);
+                lst.remove(9);
             }
             System.out.println("Iteration " + i + ": " + lst);
         }
