@@ -6,6 +6,20 @@ public class Dog extends Animal implements Noisy{
         super(name);
         this.noise = noise;
         this.owner = owner;
+        Bidule b = new Bidule();
+    }
+    private class Bidule{
+        int t;
+        Bidule b;
+        private Bidule getB(){
+            return new Bidule();
+        }
+    }
+    public class non{
+        Bidule p = new Bidule();
+        public Bidule getB(){
+            return p.getB();
+        }
     }
 
     @Override

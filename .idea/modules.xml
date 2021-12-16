@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/EX_MakeNoise/EX_MakeNoise.iml" filepath="$PROJECT_DIR$/EX_MakeNoise/EX_MakeNoise.iml" />
       <module fileurl="file://$PROJECT_DIR$/EX_ObjectList/EX_ObjectList.iml" filepath="$PROJECT_DIR$/EX_ObjectList/EX_ObjectList.iml" />
       <module fileurl="file://$PROJECT_DIR$/EX_ObjectTypeCounter/EX_ObjectTypeCounter.iml" filepath="$PROJECT_DIR$/EX_ObjectTypeCounter/EX_ObjectTypeCounter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EX_Poulailler/EX_Poulailler.iml" filepath="$PROJECT_DIR$/EX_Poulailler/EX_Poulailler.iml" />
       <module fileurl="file://$PROJECT_DIR$/EX_Seasons/EX_Seasons.iml" filepath="$PROJECT_DIR$/EX_Seasons/EX_Seasons.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/POO_EX.iml" filepath="$PROJECT_DIR$/.idea/POO_EX.iml" />
     </modules>

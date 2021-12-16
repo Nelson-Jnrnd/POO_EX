@@ -5,5 +5,7 @@ public class Test {
         for (Noisy n: boucan) {
             n.makeNoise();
         }
+        Dog d = new Dog("d", "", m);
+        Dog.non p = new Dog("d", "", m).new non();
     }
 }
